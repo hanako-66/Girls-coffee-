@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girls Coffee</title>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #A0522D;
+            --accent-color: #FFD700;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+        
+        nav {
+            background-color: var(--secondary-color);
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 120px;
+            z-index: 999;
+        }
+        
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            color: var(--accent-color);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 200px auto 100px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+            scroll-margin-top: 180px;
+        }
+        
+        section h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .menu-item {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        
+        .menu-item h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin: 0 0 10px;
+        }
+        
+        .menu-item p {
+            font-size: 1rem;
+            color: #555;
+            margin: 0;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+        }
+        
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        
+        /* تنسيقات للهواتف المحمولة */
+        @media (max-width: 768px) {
+            header {
+                padding: 20px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header p {
+                font-size: 1rem;
+            }
+            
+            nav {
+                top: 100px;
+                padding: 10px;
+            }
+            
+            nav a {
+                font-size: 1rem;
+                margin: 0 10px;
+            }
+            
+            .container {
+                margin-top: 160px;
+                padding: 15px;
+            }
+            
+            section {
+                scroll-margin-top: 160px;
+            }
+            
+            section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .menu-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .menu-item img {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .menu-item h3 {
+                font-size: 1.3rem;
+            }
+            
+            .menu-item p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Girls Coffee</h1>
+        <p>استمتع بأفضل أنواع القهوة في جو أنثوي رائع</p>
+    </header>
+
+    <nav>
+        <a href="#about">عن المقهى</a>
+        <a href="#menu">قائمة المشروبات</a>
+        <a href="#contact">اتصل بنا</a>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>عن المقهى</h2>
+            <p>مرحبًا بكم في Girls Coffee، المكان المثالي للاسترخاء والاستمتاع بأفضل أنواع القهوة في جو أنثوي مريح. نقدم لكم مجموعة متنوعة من المشروبات الساخنة والباردة، بالإضافة إلى الحلويات اللذيذة.</p>
+        </section>
+
+        <section id="menu">
+            <h2>قائمة المشروبات</h2>
+            <div class="menu-item">
+                <img src="1.jpg" alt="قهوة لاتيه" onerror="this.src='https://via.placeholder.com/100?text=لاتيه'">
+                <div>
+                    <h3>قهوة لاتيه</h3>
+                    <p>قهوة مع حليب ساخن ورغوة</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="2.jpg" alt="كابتشينو" onerror="this.src='https://via.placeholder.com/100?text=كابتشينو'">
+                <div>
+                    <h3>كابتشينو</h3>
+                    <p>بمسحوق الكاكاو</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="3.jpg" alt="موكا" onerror="this.src='https://via.placeholder.com/100?text=موكا'">
+                <div>
+                    <h3>موكا</h3>
+                    <p>مع شوكولاتة ساخنة</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="4.jpg" alt="شاي أخضر" onerror="this.src='https://via.placeholder.com/100?text=شاي'">
+                <div>
+                    <h3>شاي أخضر</h3>
+                    <p>بنكهة الليمون</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="5.jpg" alt="قهوة مقطرة" onerror="this.src='https://via.placeholder.com/100?text=مقطرة'">
+                <div>
+                    <h3>قهوة مقطرة</h3>
+                    <p>من أفضل الحبوب</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>اتصل بنا</h2>
+            <p>للحجز أو الاستفسارات، يرجى الاتصال بنا على الرقم: 0123456789</p>
+            <p>أو قم بزيارتنا في العنوان التالي: شارع القهوة، مدينة الحلم</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Girls Coffee. جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+</html>
